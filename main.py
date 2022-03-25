@@ -23,7 +23,7 @@ BLUE_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_blue.png"))
 YELLOW_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_yellow.png"))
 
 # Background
-BG = pygame.transform.scale(pygame.image.load(os.path.join("assets", "background-black.png")), (WIDTH, HEIGHT))
+BG = pygame.transform.scale(pygame.image.load(os.path.join("assets", "space-PNG-Clipart.png")), (WIDTH, HEIGHT))
 
 class Laser:
     def __init__(self, x, y, img):
@@ -248,7 +248,7 @@ def main_menu():
     run = True
     while run:
         WIN.blit(BG, (0,0))
-        title_label = title_font.render("Press the mouse to begin...", 1, (255,255,255))
+        title_label = title_font.render("Click Mouse to start", 1, (255,255,255))
         WIN.blit(title_label, (WIDTH/2 - title_label.get_width()/2, 350))
         pygame.display.update()
         for event in pygame.event.get():
